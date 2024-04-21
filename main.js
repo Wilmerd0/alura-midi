@@ -1,40 +1,23 @@
-function playSonidoPom () {
-    document.querySelector('#sonido_tecla_pom').play();
+function playSonido (idElementoAudio) {
+    document.querySelector(idElementoAudio).play();
 }
 
-document.querySelector('.tecla_pom').onclick = playSonidoPom;
+const listaDeTeclas = document.querySelectorAll('.tecla');
+
+let contador = 0
+
+while (contador < 9) {
+    listaDeTeclas[contador].onclick = ()=>{
+        playSonido('#sonido_tecla_tom');
+    };
+    contador++;
+}
 
 
 
 
 
 
-
-
-// function playSonidoTim (){
-//     document.querySelector('#sonido_tecla_tim').play;
-// };
-// function playSonidoPuff (){
-//     document.querySelector('#sonido_tecla_puff').play;
-// };
-// function playSonidoSplash (){
-//     document.querySelector('#sonido_tecla_splash').play;
-// };
-// function playSonidoClap (){
-//     document.querySelector('#sonido_tecla_clap').play;
-// };
-// function playSonidoToim (){
-//     document.querySelector('#sonido_tecla_toim').play;
-// };
-// function playSonidoPsh (){
-//     document.querySelector('#sonido_tecla_psh').play;
-// };
-// function playSonidoTic (){
-//     document.querySelector('#sonido_tecla_tic').play;
-// };
-// function playSonidoTom (){
-//     document.querySelector('#sonido_tecla_tom').play;
-// };
 
 
 
